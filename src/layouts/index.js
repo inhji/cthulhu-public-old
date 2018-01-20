@@ -35,7 +35,7 @@ const TemplateWrapper = ({ children }) => (
     >
       <Nav />
       <main>{children()}</main>
-      <footer>
+      <footer style={{ marginTop: 10, borderTop: '1px solid #eee', paddingTop: 10 }}>
         Created in 2018 by Inhji with Blood, Sweat and Gatsby.js{' '}
         <FontAwesomeIcon icon={faHeartbeat} />
       </footer>
