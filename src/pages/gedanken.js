@@ -17,7 +17,10 @@ const Thoughts = ({ data }) => (
 
 export const pageQuery = graphql`
   query AllThoughts {
-    allMarkdownRemark(filter: { frontmatter: { tag: { eq: "gedanke" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { tag: { eq: "gedanke" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           frontmatter {

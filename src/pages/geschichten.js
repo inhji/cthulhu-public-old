@@ -17,12 +17,16 @@ const Stories = ({ data }) => (
 
 export const pageQuery = graphql`
   query AllStories {
-    allMarkdownRemark(filter: { frontmatter: { tag: { eq: "geschichte" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { tag: { eq: "geschichte" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           frontmatter {
             title
             path
+            date
           }
         }
       }
