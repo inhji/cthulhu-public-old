@@ -1,22 +1,6 @@
 const path = require('path')
 const fetch = require('node-fetch')
 
-exports.onCreateNode = async ({ node, getNode, loadNodeContent, boundActionCreators }) => {
-  if (node.internal.type === `File`) {
-    console.log(node)
-  }
-}
-
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
-
-  console.log(page)
-
-  return new Promise((resolve, reject) => {
-    resolve()
-  })
-}
-
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
@@ -24,7 +8,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }, limit: 1000) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
         edges {
           node {
             excerpt(pruneLength: 250)
