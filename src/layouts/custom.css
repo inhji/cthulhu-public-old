@@ -21,6 +21,16 @@ ul {
 }
 
 li {
+  list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+blockquote {
+  font-size: 120%;
+  margin-left: 0.45rem;
+}
+
+blockquote p::before {
+  content: '> ';
 }
