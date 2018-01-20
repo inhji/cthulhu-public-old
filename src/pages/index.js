@@ -20,7 +20,8 @@ function BlogPosts(posts, { tag }) {
 
 const IndexPage = ({ data }) => (
   <div>
-    <div>
+    <h1>Unter Konstruktion</h1>
+    {/* <div>
       <p>
         An manchen Tagen empfinde ich mein Dasein als überflüssig und verstehe nicht, welche
         Bedeutung mein Leben für irgendjemand, mich eingeschlossen, haben könnte. An anderen Tagen
@@ -45,28 +46,14 @@ const IndexPage = ({ data }) => (
         oder nicht, <a href="https://www.last.fm/user/inhji">mein Musikgeschmack</a> bewegt sich
         weitab von Chartlisten, aktuellen Hits und Popmusik im Allgemeinen.
       </p>
-    </div>
-    <p>
+    </div> */}
+    {/* <p>
       In einer Welt, die sich immer schneller dreht, versuche ich die Worte{' '}
       <strong>
         <abbr title="Sozusagen das Gegenteil von 'Live fast, die young'">Live slow, die old</abbr>
       </strong>{' '}
       zu meinem Lebensmotto zu machen.
-    </p>
-    <p style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <div style={{ flex: 1 }}>
-        <h2>Geschichten</h2>
-        {BlogPosts(data.allMarkdownRemark.edges, { tag: 'geschichte' })}
-      </div>
-      <div style={{ flex: 1 }}>
-        <h2>Gedanken</h2>
-        {BlogPosts(data.allMarkdownRemark.edges, { tag: 'gedanke' })}
-      </div>
-      <div style={{ flex: 1 }}>
-        <h2>Farbenflut</h2>
-        {BlogPosts(data.allMarkdownRemark.edges, { tag: 'farbenflut' })}
-      </div>
-    </p>
+    </p> */}
   </div>
 )
 
