@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Stories = ({ data }) => (
+const Thoughts = ({ data }) => (
   <div>
-    <h1>Geschichten</h1>
+    <h1>Gedanken</h1>
 
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -16,8 +16,8 @@ const Stories = ({ data }) => (
 )
 
 export const pageQuery = graphql`
-  query AllStories {
-    allMarkdownRemark(filter: { frontmatter: { tag: { eq: "geschichte" } } }) {
+  query AllThoughts {
+    allMarkdownRemark(filter: { frontmatter: { tag: { eq: "gedanke" } } }) {
       edges {
         node {
           frontmatter {
@@ -30,4 +30,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Stories
+export default Thoughts
