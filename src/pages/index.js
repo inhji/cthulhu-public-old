@@ -2,12 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import zalgo from 'to-zalgo'
 
-import './index.css'
-
 function BlogPosts(posts, { tag }) {
   return (
     <ul>
-      {posts.filter(post => post.node.frontmatter.tag === tag).map(post => (
+      {posts.map(post => (
         <li key={post.node.frontmatter.path}>
           <Link to={post.node.frontmatter.path} style={{ padding: 10 }}>
             {post.node.frontmatter.title}
@@ -21,14 +19,14 @@ function BlogPosts(posts, { tag }) {
 const IndexPage = ({ data }) => (
   <div>
     <h1>Unter Konstruktion</h1>
-    {/* <div>
-      <p>
+    <div>
+      {/* <p>
         An manchen Tagen empfinde ich mein Dasein als überflüssig und verstehe nicht, welche
         Bedeutung mein Leben für irgendjemand, mich eingeschlossen, haben könnte. An anderen Tagen
         lache ich gerne mit anderen Menschen oder in mich hinein, freue mich über Dinge wie Wolken
         oder einen Vogel und kann nichts schlechtes in meiner Welt sehen.
-      </p>
-      <p>
+      </p> */}
+      {/* <p>
         Über die Dinge, die ich gerne tue, wage ich es meistens nicht zu reden, weil ich die
         seltsame Vorstellung habe, dass niemand sich für das interessiert, was mir Freude macht. Ich
         habe nach Jahren Bücher wieder für mich entdeckt, insbesondere die Geschichten von H.P.
@@ -45,8 +43,8 @@ const IndexPage = ({ data }) => (
         suche ich die passende Musik, ob es nun Wut, Euphorie, Depression oder Trauer ist. Ob Zufall
         oder nicht, <a href="https://www.last.fm/user/inhji">mein Musikgeschmack</a> bewegt sich
         weitab von Chartlisten, aktuellen Hits und Popmusik im Allgemeinen.
-      </p>
-    </div> */}
+      </p> */}
+    </div>
     {/* <p>
       In einer Welt, die sich immer schneller dreht, versuche ich die Worte{' '}
       <strong>
